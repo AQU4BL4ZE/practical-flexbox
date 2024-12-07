@@ -1,11 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            padding: 4px;
+            height: calc(100vh - 8px);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        nav,
+        main,
+        aside,
+        footer {
+            border: 1px solid black;
+            padding: 4px;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .headcont {
+            display: flex;
+            align-items: center;
+            margin: 2px;
+            gap: 2px;
+        }
+
+        .logo {
+            background-color: red;
+            height: 40px;
+            width: 40px;
+        }
+
+        .rectangleparent {
+            display: flex;
+            gap: 2px;
+            margin: 2px;
+        }
+
+        .rectangle {
+            background-color: red;
+            height: 30px;
+            width: 50px;
+        }
+
+        .main-parent {
+            display: flex;
+            gap: 4px;
+            flex-grow: 1;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            width: 75%;
+        }
+
+        .parent1 {
+            display: flex;
+            padding: 4px;
+            flex-wrap: wrap;
+            gap: 4px;
+            border: 1px solid black;
+            margin: 2px;
+        }
+
+        .smallboxes {
+            border: 1px solid black;
+            height: 100px;
+            width: 100px;
+        }
+
+        .parent2 {
+            display: flex;
+            padding: 4px;
+            justify-content: space-between;
+            gap: 4px;
+            border: 1px solid black;
+            margin: 2px;
+        }
+
+        .bigboxes {
+            border: 1px solid black;
+            height: 150px;
+            width: 250px;
+        }
+
+        aside {
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+            gap: 4px;
+        }
+
+        .longrectangles {
+            border: 1px solid black;
+            height: 30px;
+            width: auto;
+            margin: 2px;
+        }
+
+        .footer1 {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            margin: 4px;
+        }
+
+        .footerbox1 {
+            background-color: red;
+            height: 40px;
+            width: 40px;
+        }
+
+        .footer2 {
+            display: flex;
+            gap: 2px;
+            margin: 4px;
+            border: 1px solid rgb(103, 100, 100);
+        }
+
+        .footerboxparent {
+            display: flex;
+            gap: 4px;
+            justify-content: center;
+        }
+
+        .footerboxes {
+            background-color: red;
+            height: 25px;
+            width: 25px;
+        }
+
+        .copyright {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>FLEXBOX ONE</h1>
+
+    <nav>
+        <div class="headcont">
+            <div class="logo"></div>
+            <div class="flexbox">FLEXBOX</div>
+        </div>
+        <div class="rectangleparent">
+            <div class="rectangle"></div>
+            <div class="rectangle"></div>
+        </div>
+    </nav>
+    <div class="main-parent">
+        <main>
+            <div class="parent1">
+                <div class="smallboxes"></div>
+                <div class="smallboxes"></div>
+                <div class="smallboxes"></div>
+                <div class="smallboxes"></div>
+                <div class="smallboxes"></div>
+                <div class="smallboxes"></div>
+                <div class="smallboxes"></div>
+                <div class="smallboxes"></div>
+                <div class="smallboxes"></div>
+                <div class="smallboxes"></div>
+                <div class="smallboxes"></div>
+                <div class="smallboxes"></div>
+                <div class="smallboxes"></div>
+                <div class="smallboxes"></div>
+                <div class="smallboxes"></div>
+            </div>
+            <div class="parent2">
+                <div class="bigboxes"></div>
+                <div class="bigboxes"></div>
+                <div class="bigboxes"></div>
+            </div>
+        </main>
+        <aside>
+            <div class="longrectangles"></div>
+            <div class="longrectangles"></div>
+            <div class="longrectangles"></div>
+            <div class="longrectangles"></div>
+            <div class="longrectangles"></div>
+            <div class="longrectangles"></div>
+            <div class="longrectangles"></div>
+            <div class="longrectangles"></div>
+            <div class="longrectangles"></div>
+            <div class="longrectangles"></div>
+        </aside>
+    </div>
+    <footer>
+        <div class="footer1">
+            <div class="footerbox1"></div>
+            <div class="footermessage">FLEXBOX</div>
+        </div>
+        <div class="footer2"></div>
+        <div class="footer3">
+            <div class="footerboxparent">
+                <div class="footerboxes"></div>
+                <div class="footerboxes"></div>
+                <div class="footerboxes"></div>
+                <div class="footerboxes"></div>
+                <div class="footerboxes"></div>
+            </div>
+            <div class="copyright">©Copyrights All rights reserved</div>
+        </div>
+    </footer>
 </body>
+
 </html>
