@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox 2</title>
+    <title>Flexbox 8</title>
     <style>
         * {
             margin: 0px;
@@ -17,6 +17,7 @@
             display: flex;
             flex-direction: column;
             gap: 4px;
+
         }
 
         nav,
@@ -41,46 +42,50 @@
             gap: 2px;
         }
 
-        .logo {
+        .navboxone {
             background-color: red;
             height: 40px;
             width: 40px;
         }
 
-        .navrectangle {
+        .navt {
             display: flex;
             gap: 2px;
-            margin: 2px
+            margin: 2px;
         }
 
-        .navtworect {
+        .navtwoboxes {
             background-color: red;
             height: 30px;
-            width: 60px;
+            width: 50px;
         }
 
-        .container {
+        .middle {
             display: flex;
             gap: 4px;
             flex-grow: 1;
+
         }
 
         main {
             display: flex;
+            flex-direction: row;
             flex-grow: 1;
             gap: 4px;
         }
 
-        .parent1 {
+
+        .parent {
             display: flex;
             flex-grow: 1;
+
         }
 
-        .middle1 {
+        .middlefirst {
             display: flex;
+            justify-content: space-around;
             flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
+            align-items: baseline;
             flex-grow: 1;
             width: 50%;
             border: 2px solid black;
@@ -88,19 +93,22 @@
 
         .middlefirstboxes1 {
             border: 2px solid black;
-            height: 180px;
-            width: 240px;
-            margin: 2px;
+            height: 200px;
+            width: 300px;
+            margin: 5px;
+
         }
 
-        .middlesecondboxes1 {
+        .middlefirstboxes2 {
             border: 2px solid black;
-            height: 180px;
-            width: 240px;
-            margin: 2px;
+            height: 200px;
+            width: 300px;
+            margin: 5px;
+
         }
 
-        .middle2 {
+
+        .middlesecond {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -111,10 +119,12 @@
             border: 2px solid black;
         }
 
-        .middlesecondboxes2 {
+        .middlesecondboxes {
             border: 2px solid black;
-            height: 120px;
-            width: 120px;
+            height: 100px;
+            width: 100px;
+
+
         }
 
         aside {
@@ -125,8 +135,8 @@
 
         .asideboxes {
             border: 2px solid black;
-            margin: 2px;
-            height: 20px;
+            margin: 1px;
+            height: 35px;
             width: 15vw;
         }
 
@@ -169,49 +179,57 @@
     </style>
 </head>
 
+
 <body>
+
+
+
     <nav>
         <div class="headcont">
-            <div class="logo"></div>
+            <div class="navboxone"></div>
             <div class="navflexbox">FLEXBOX</div>
         </div>
-        <div class="navrectangle">
-            <div class="navtworect"></div>
-            <div class="navtworect"></div>
+        <div class="navt">
+            <div class="navtwoboxes"></div>
+            <div class="navtwoboxes"></div>
         </div>
     </nav>
-    <div class="container">
+
+    <div class="middle">
         <main>
-            <div class="parent1">
-                <div class="middle1">
+
+            <div class="middlesecond">
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+            </div>
+
+            <div class="parent">
+                <div class="middlefirst">
                     <div class="middleboxes1">
                         <div class="middlefirstboxes1"></div>
                         <div class="middlefirstboxes1"></div>
                     </div>
                     <div class="middleboxes2">
-                        <div class="middlesecondboxes1"></div>
-                        <div class="middlesecondboxes1"></div>
+                        <div class="middlefirstboxes2"></div>
+                        <div class="middlefirstboxes2"></div>
                     </div>
                 </div>
             </div>
-            <div class="middle2">
-                <div class="middlesecondboxes2"></div>
-                <div class="middlesecondboxes2"></div>
-                <div class="middlesecondboxes2"></div>
-                <div class="middlesecondboxes2"></div>
-                <div class="middlesecondboxes2"></div>
-                <div class="middlesecondboxes2"></div>
-                <div class="middlesecondboxes2"></div>
-                <div class="middlesecondboxes2"></div>
-                <div class="middlesecondboxes2"></div>
-                <div class="middlesecondboxes2"></div>
-                <div class="middlesecondboxes2"></div>
-                <div class="middlesecondboxes2"></div>
-                <div class="middlesecondboxes2"></div>
-                <div class="middlesecondboxes2"></div>
-                <div class="middlesecondboxes2"></div>
-            </div>
         </main>
+
         <aside>
             <div class="asideboxes"></div>
             <div class="asideboxes"></div>
@@ -225,12 +243,15 @@
             <div class="asideboxes"></div>
         </aside>
     </div>
+
     <footer>
         <div class="footerfirst">
             <div class="footerbox"></div>
             <div class="footerflexbox">FLEXBOX</div>
         </div>
+
         <div class="footersecond"></div>
+
         <div class="footerthird">
             <div class="footerboxes">
                 <div class="footercubes"></div>
@@ -239,9 +260,15 @@
                 <div class="footercubes"></div>
                 <div class="footercubes"></div>
             </div>
-            <div class="copyright">©Copyrights All rights reserved.</div>
+
+            <div class="copyright">©Copyrights All rights reserved</div>
         </div>
     </footer>
+
+
+
+
+
 </body>
 
 </html>
